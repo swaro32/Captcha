@@ -431,7 +431,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
             imagefill($image, 0, 0, $bg);
         } else {
             // use a random background image
-            $randomBackgroundImage = $this->backgroundImages[rand(0, count($this->backgroundImages)-1)];
+            $randomBackgroundImage = $this->backgroundImages[ random_int(0, count($this->backgroundImages) - 1) ];
 
             $imageType = $this->validateBackgroundImage($randomBackgroundImage);
 
